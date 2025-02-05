@@ -11,15 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pedidos', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->id();
-            $table->dateTime("fecha");
-            $table->text("observacion")->nullable();
-            $table->boolean("estado")->nullable();
-            $table->bigInteger("cliente_id")->unsigned();
-
-            $table->foreign("cliente_id")->references("id")->on("clientes");
-            
+            $table->string("nombre", 50);
+            $table->text("detalle")->nullable();
+            $table->boolean("estado")->default(true);
             $table->timestamps();
         });
     }
@@ -29,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pedidos');
+        Schema::dropIfExists('roles');
     }
 };
