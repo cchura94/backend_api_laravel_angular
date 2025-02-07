@@ -1,0 +1,4 @@
+### Listar Producto
+GET http://127.0.0.1:8000/api/producto?page=1
+Accept: application/json
+Authorization: Bearer 10|vlUV5wPZXvTa8vOcSuVIHPbat3LZ6J5dgIrU7ZSZ371adcc0
