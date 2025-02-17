@@ -18,10 +18,11 @@ class ProductoController extends Controller
             $productos = Producto::orderBy('id', 'desc')
                 ->where('nombre', 'like', "%$request->q%")
                 ->orWhere('precio', 'like', "%$request->q%")
+                ->with(['categoria'])
                 ->paginate($limit);
             return response()->json($productos, 200);
         }else{
-            $productos = Producto::orderBy('id', 'desc')->paginate($limit);
+            $productos = Producto::orderBy('id', 'desc')->with(['categoria'])->paginate($limit);
             return response()->json($productos, 200);
         }
 

@@ -1,4 +1,20 @@
 ### Listar Producto
-GET http://127.0.0.1:8000/api/producto?page=1
+GET http://127.0.0.1:8000/api/producto?page=1&limit=2&q=GAMER
 Accept: application/json
-Authorization: Bearer 10|vlUV5wPZXvTa8vOcSuVIHPbat3LZ6J5dgIrU7ZSZ371adcc0
+Authorization: Bearer 1|WMGcTLDBhZiOLmay7fRIoi2bbCbrVTneiczqOOsHfc9c6cf4
+
+
+### guardar producto
+
+POST http://127.0.0.1:8000/api/producto
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 1|WMGcTLDBhZiOLmay7fRIoi2bbCbrVTneiczqOOsHfc9c6cf4
+
+{
+    "nombre": "ROPERO",
+    "precio": 629.98,
+    "categoria_id": 2,
+    "stock": 8,
+    "descripcion": "ROPERO DE METAL"
+}
