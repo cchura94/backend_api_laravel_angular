@@ -36,7 +36,7 @@ class ProductoController extends Controller
         // validacion
         $request->validate([
             'nombre' => 'required|string|max:200',
-            'precio' => 'numeric',
+            //'precio' => 'numeric',
             'categoria_id' => 'required|numeric',
             'stock' => 'numeric'
         ]);
