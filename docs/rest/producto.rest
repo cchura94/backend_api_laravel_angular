@@ -1,7 +1,7 @@
 ### Listar Producto
-GET http://127.0.0.1:8000/api/producto?page=1&limit=2&q=GAMER
+GET http://127.0.0.1:8000/api/producto?page=2&limit=10&q=
 Accept: application/json
-Authorization: Bearer 1|WMGcTLDBhZiOLmay7fRIoi2bbCbrVTneiczqOOsHfc9c6cf4
+Authorization: Bearer 6|rcF39p0gj10UdC6jIwikjgFCl6BVlsxlQKVkYuBOa0d92ff4
 
 
 ### guardar producto

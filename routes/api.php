@@ -30,7 +30,11 @@ Route::prefix('/v1/auth')->group(function(){
 });
 
 
+
 Route::get('categoria-publica', [CategoriaController::class, 'listaCategoriaPublica']);
+
+Route::get('pedido/{id}/reporte-PDF-mostrar', [PedidoController::class, "funGenerarReporteMostrarPedidoPDF"]);
+Route::get('pedido/reporte-PDF', [PedidoController::class, "funGenerarReporteListaPedidoPDF"]);
 
 Route::middleware('auth:sanctum')->group(function () {
     
